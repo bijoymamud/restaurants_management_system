@@ -80,7 +80,7 @@ const Sidebar = () => {
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-md transition-all duration-200 ${
                     pathname.includes(item.path)
-                      ? "text-[#FF6E02] bg-orange-50/50 font-semibold"
+                      ? " bg-[#FF6E02] text-white font-semibold"
                       : "text-gray-400 hover:bg-orange-50 hover:text-[#FF6E02]"
                   }`}
                 >
@@ -107,7 +107,7 @@ const Sidebar = () => {
                       className={({ isActive }) =>
                         `block px-4 py-2 text-sm rounded-md transition-all ${
                           isActive
-                            ? "text-[#FF6E02] font-bold bg-orange-50"
+                            ? "text-white font-bold bg-[#FF8F3C]"
                             : "text-gray-400 hover:text-[#FF6E02]"
                         }`
                       }
