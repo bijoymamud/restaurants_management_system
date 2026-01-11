@@ -92,13 +92,12 @@ const Sidebar = () => {
   return (
     <div className="w-68 min-h-screen bg-white border-r border-gray-100 flex flex-col p-6 sticky top-0">
       {/* Brand Logo */}
-      <div className="flex items-center gap-2 mb-10 px-2">
-        <div className="bg-[#FF6E02] p-2 rounded-lg shadow-lg shadow-orange-200">
-          <span className="text-white font-bold text-sm">SM</span>
-        </div>
-        <span className="text-xl font-bold text-gray-800 tracking-tight uppercase">
-          Saucy Menu
-        </span>
+      <div className="flex items-center justify-center gap-2 mb-10 px-2">
+        <img
+          src="https://images.seeklogo.com/logo-png/44/2/kitchen-logo-png_seeklogo-449542.png"
+          alt=""
+          className="w-2/3"
+        />
       </div>
 
       {/* Navigation */}
@@ -220,7 +219,7 @@ const Sidebar = () => {
       </div>
 
       {/* Logout */}
-      <button className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-red-500 transition-colors mt-auto border-t border-gray-50 pt-4">
+      <button className="flex cursor-pointer items-center gap-3 px-4 py-3 text-red-500 hover:text-red-500 transition-colors mt-auto border-t border-gray-200 pt-4">
         <LuLogOut size={20} />
         <span className="font-medium">Logout</span>
       </button>

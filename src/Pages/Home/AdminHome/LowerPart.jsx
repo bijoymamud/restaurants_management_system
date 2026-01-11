@@ -15,8 +15,8 @@ const LowerPart = () => {
       <ListCard title="Top selling Product" />
 
       {/* Category Donut Chart */}
-      <div className="lg:col-span-4 bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col">
-        <h3 className="font-bold text-gray-800 mb-6 text-lg">
+      <div className="lg:col-span-4 bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 flex flex-col">
+        <h3 className="font-bold text-tagline capitalize mb-6 text-xl">
           Most viewed dishes by category
         </h3>
         <div className="h-[220px] w-full relative">
@@ -65,8 +65,8 @@ const LowerPart = () => {
 };
 
 const ListCard = ({ title }) => (
-  <div className="lg:col-span-4 bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100">
-    <h3 className="font-bold text-gray-800 mb-6 text-lg">{title}</h3>
+  <div className="lg:col-span-4 bg-white p-6 rounded-[10px] shadow-sm border border-gray-100">
+    <h3 className="font-bold text-tagline mb-6 text-xl capitalize">{title}</h3>
     <div className="space-y-4">
       <FoodItem />
       <FoodItem />
@@ -75,7 +75,7 @@ const ListCard = ({ title }) => (
 );
 
 const FoodItem = () => (
-  <div className="flex gap-4 p-3 border border-gray-50 rounded-2xl bg-[#fdfdfd]">
+  <div className="flex gap-4 p-3 border-2 border-[#F7941D66]/40 rounded-2xl bg-[#fdfdfd]">
     <div className="w-20 h-18 rounded-xl overflow-hidden shadow-sm">
       <img
         src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=150"
@@ -84,17 +84,17 @@ const FoodItem = () => (
       />
     </div>
     <div className="flex flex-col justify-center">
-      <h4 className="font-bold text-gray-800">Burger</h4>
-      <p className="text-[10px] font-medium text-gray-400 mb-1">Category:</p>
-      <div className="flex items-center gap-3">
-        <span className="flex items-center gap-1 text-[9px] text-gray-500 font-bold">
-          <LuStar size={10} className="text-gray-300" /> 4.8(163)
+      <h4 className="font-bold text-gray-800 text-lg">Burger</h4>
+      <p className="text-sm font-medium text-gray-400 mb-1">Category:</p>
+      <div className="flex items-center gap-3 pt-3">
+        <span className="flex items-center gap-1 text-sm text-gray-500 font-bold">
+          <LuStar size={14} className="text-title" /> 4.8(163)
         </span>
-        <span className="flex items-center gap-1 text-[9px] text-gray-500 font-bold">
-          <LuShoppingBag size={10} className="text-gray-300" /> 163
+        <span className="flex items-center gap-1 text-sm text-gray-500 font-bold">
+          <LuShoppingBag size={14} className="text-title" /> 163
         </span>
-        <span className="flex items-center gap-1 text-[9px] text-gray-500 font-bold">
-          <LuUsers size={10} className="text-gray-300" /> 4.8(163)
+        <span className="flex items-center gap-1 text-sm text-gray-500 font-bold">
+          <LuUsers size={14} className="text-title" /> 4.8(163)
         </span>
       </div>
     </div>
