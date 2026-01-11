@@ -5,14 +5,16 @@ import SignIn from "@/Pages/Authentication/SignIn";
 import SignUp from "@/Pages/Authentication/SignUp";
 import MailVerification from "@/Pages/Authentication/MailVerification";
 import OTPVerification from "@/Pages/Authentication/OTPVerification";
-import ResetPassowrd from "@/Pages/Authentication/ResetPassowrd";
-import DashboardLayout from "@/Layout/DashboardLayout/DashboardLayout";
-import Category from "@/Pages/Home/Menu/Category";
-import All_food from "@/Pages/Home/Menu/All_food";
 
-const Admin_Home = React.lazy(() =>
-  import("../Pages/Home/AdminHome/Admin_Home")
-);
+import DashboardLayout from "@/Layout/DashboardLayout/DashboardLayout";
+import NotFound from "@/Layout/404Page/NotFound";
+
+const AdminHome = React.lazy(() => import("@/Pages/Home/AdminHome/Admin_Home"));
+const Order = React.lazy(() => import("@/Pages/Home/OrderPage/Order"));
+const Category = React.lazy(() => import("@/Pages/Home/Menu/Category"));
+const AllFood = React.lazy(() => import("@/Pages/Home/Menu/All_food"));
+const Review = React.lazy(() => import("@/Pages/Home/Review/Review"));
+const Branding = React.lazy(() => import("@/Pages/Home/Branding/Branding"));
 
 export const router = createBrowserRouter([
   {
@@ -20,37 +22,62 @@ export const router = createBrowserRouter([
     element: <SignIn />,
   },
   {
+    path: "/sign_up",
+    element: <SignUp />,
+  },
+  {
+    path: "/email_verification",
+    element: <MailVerification />,
+  },
+  {
+    path: "/otp_verification",
+    element: <OTPVerification />,
+  },
+
+  {
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [
       {
-        index: true, 
-        element: (
-          <Suspense fallback={<div className="p-8">Loading Dashboard...</div>}>
-            <Admin_Home />
-          </Suspense>
-        ),
+        index: true,
+        element: <AdminHome />,
       },
-      {
-        path: "admin_home",
-        element: (
-          <Suspense fallback={<div className="p-8">Loading...</div>}>
-            <Admin_Home />
-          </Suspense>
-        ),
-      },
+
       {
         path: "menu",
         children: [
-          { index: true, element: <Navigate to="all_food" replace /> },
-          { path: "category", element: <Category /> },
-          { path: "all_food", element: <All_food /> },
+          {
+            index: true,
+            element: <Navigate to="all_food" replace />,
+          },
+          {
+            path: "category",
+            element: <Category />,
+          },
+          {
+            path: "all_food",
+            element: <AllFood />,
+          },
         ],
+      },
+
+      {
+        path: "orders",
+        element: <Order />,
+      },
+      {
+        path: "reviews",
+        element: <Review />,
+      },
+      {
+        path: "branding",
+        element: <Branding />,
       },
     ],
   },
-  { path: "/sign_up", element: <SignUp /> },
-  { path: "/email_verification", element: <MailVerification /> },
-  { path: "/otp_verification", element: <OTPVerification /> },
-  { path: "/reset_password", element: <ResetPassowrd /> },
+
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);

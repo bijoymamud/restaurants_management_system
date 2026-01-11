@@ -1,30 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
 @import "tailwindcss";
 
 :root {
     font-family: "Space Grotesk", sans-serif;
 
-    --color-title: #212121;
-    --color-tagline: #757575;
-    --color-label: #616161;
-    --color-background: #FBFEFE;
-    --color-dark-gray: #6A707C;
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import "tailwindcss";
-
-:root {
-    font-family: "Space Grotesk", sans-serif;
-
-    /* 🎨 Color variables (same naming as your object) */
-    --color-title: #212121;
-    --color-tagline: #757575;
-    --color-label: #616161;
-    --color-background: #FBFEFE;
-    --color-paragraph: #dce1eb;
+    --color-title: #FF6E02;
+    --color-tagline: #2d3748;
+    --color-label: #898989;
 }
 
 /* Optional: utility classes to mimic Tailwind’s text/bg usage */

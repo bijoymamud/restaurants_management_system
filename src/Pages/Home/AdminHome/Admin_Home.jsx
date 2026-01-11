@@ -1,9 +1,13 @@
-import React from "react";
+import LowerPart from "./LowerPart";
+import UpperPart from "./UpperPart";
 
 const Admin_Home = () => {
   return (
-    <div>
-      <h1 className="text-3xl">adminHomehome</h1>
+    <div className=" bg-[#F9FAFB] min-h-screen space-y-8 ">
+      <div className="flex justify-between items-center mb-2"></div>
+
+      <UpperPart />
+      <LowerPart />
     </div>
   );
 };

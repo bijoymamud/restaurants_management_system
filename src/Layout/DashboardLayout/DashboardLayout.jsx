@@ -1,23 +1,20 @@
 import { Outlet } from "react-router";
-import { LuBell, LuSettings, LuSearch } from "react-icons/lu";
+import { LuBell, LuSettings } from "react-icons/lu";
 import Sidebar from "./SideBar";
 
 const DashboardLayout = () => {
   return (
-    <div className="flex bg-[#F9FAFB] min-h-screen">
+    <div className="fixed inset-0 flex bg-[#F9FAFB]">
       <Sidebar />
+
       <div className="flex-1 flex flex-col">
-        <header className="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-8">
-          <h2 className="text-xl font-bold text-gray-800">Dashboard</h2>
+        <header
+          className="h-20 bg-white border-b border-gray-100
+          flex items-center justify-between px-8 shrink-0"
+        >
+          <h2 className="text-xl font-bold text-tagline">Dashboard</h2>
 
           <div className="flex items-center gap-6">
-            <div className="relative hidden md:block">
-              <LuSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-              <input
-                className="bg-gray-50 rounded-full pl-10 pr-4 py-2 border-none focus:ring-1 focus:ring-[#FF6E02] text-sm w-64"
-                placeholder="Search..."
-              />
-            </div>
             <div className="flex gap-3">
               <button className="p-2 text-gray-400 hover:bg-gray-50 rounded-full border border-gray-100">
                 <LuBell size={20} />
@@ -26,14 +23,16 @@ const DashboardLayout = () => {
                 <LuSettings size={20} />
               </button>
             </div>
+
             <img
-              src="https://ui-avatars.com/api/?name=User"
-              className="w-10 h-10 rounded-full border-2 border-white shadow-sm"
+              src="https://img.freepik.com/free-vector/smiling-young-man-illustration_1308-174669.jpg"
+              className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-md"
               alt="profile"
             />
           </div>
         </header>
-        <main className="p-8 overflow-y-auto">
+
+        <main className="flex-1 overflow-y-auto p-8">
           <Outlet />
         </main>
       </div>
