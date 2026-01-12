@@ -90,8 +90,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-68 min-h-screen bg-white border-r border-gray-100 flex flex-col p-6 sticky top-0">
-      {/* Brand Logo */}
+    <div className="w-68 shadow-[2px_0_6px_-5px_rgba(0,0,0,0.3)] min-h-screen bg-white border-r border-gray-100 flex flex-col p-6 sticky top-0">
       <div className="flex items-center justify-center gap-2 mb-10 px-2">
         <img
           src="https://images.seeklogo.com/logo-png/44/2/kitchen-logo-png_seeklogo-449542.png"
@@ -100,7 +99,6 @@ const Sidebar = () => {
         />
       </div>
 
-      {/* Navigation */}
       <nav className="flex-1 space-y-2">
         {menuItems.map((item) => (
           <div key={item.name}>

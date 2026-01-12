@@ -8,6 +8,10 @@ import OTPVerification from "@/Pages/Authentication/OTPVerification";
 
 import DashboardLayout from "@/Layout/DashboardLayout/DashboardLayout";
 import NotFound from "@/Layout/404Page/NotFound";
+import Help_Support from "@/Pages/Settings/Help_Support";
+import Terms_Conditions from "@/Pages/Settings/Terms_Conditions";
+import Manage_subscription from "@/Pages/Settings/Manage_subcription";
+import Privacy_Policy from "@/Pages/Settings/Privacy_Policy";
 
 const AdminHome = React.lazy(() => import("@/Pages/Home/AdminHome/Admin_Home"));
 const Order = React.lazy(() => import("@/Pages/Home/OrderPage/Order"));
@@ -59,6 +63,23 @@ export const router = createBrowserRouter([
             element: <AllFood />,
           },
         ],
+      },
+
+      {
+        path: "help_support",
+        element: <Help_Support />,
+      },
+      {
+        path: "terms_conditions",
+        element: <Terms_Conditions />,
+      },
+      {
+        path: "manage_subscriptions",
+        element: <Manage_subscription />,
+      },
+      {
+        path: "privacy_policy",
+        element: <Privacy_Policy />,
       },
 
       {

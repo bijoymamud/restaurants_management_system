@@ -84,7 +84,7 @@ const FoodItem = () => (
       />
     </div>
     <div className="flex flex-col justify-center">
-      <h4 className="font-bold text-gray-800 text-lg">Burger</h4>
+      <h4 className="font-bold text-tagline text-lg">Burger</h4>
       <p className="text-sm font-medium text-gray-400 mb-1">Category:</p>
       <div className="flex items-center gap-3 pt-3">
         <span className="flex items-center gap-1 text-sm text-gray-500 font-bold">
